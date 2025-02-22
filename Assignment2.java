@@ -20,7 +20,7 @@ public class Assignment2 {
     public static int[] GetValues(int max, int min) { 
         
         // The length has to be max + 1 because that should be the total length of the array, not max + min - logic error
-        int length = max + min; 
+        int length = max + 1; 
         //              ^ logic error        
 
         // Checks if the array size is less than 0, and if it is, it will return a null value
