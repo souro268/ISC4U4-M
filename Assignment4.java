@@ -6,37 +6,46 @@ import java.util.Scanner;
 public class Assignment4 {
     public static void main(String[] args) {
 
-        File textFile = new File("Assignment4_Input.txt");
-        
-        Scanner fileScanner;
-
         try {
+            // Create a File object for the input file
+            File textFile = new File("Assignment4_Input.txt");
 
-            fileScanner = new Scanner(textFile);
-            String string = fileScanner.nextLine();
-
-
-            String[] strArr = string.split(" "); // Split by spaces
+            // Create a Scanner to read from the input file
+            Scanner fileScanner = new Scanner(textFile);
             
-            int[] arr = new int[strArr.length]; // Create integer array
+            // Declare variables to store integer pairs
+            int int1, int2;
 
-            for (int i = 0; i < strArr.length; i++) {
-                arr[i] = Integer.parseInt(strArr[i]); // Convert to int
-            }
-            
+            // Boolean flag to control loop execution
+            boolean exit = false;
+
+            // Create a FileWriter to write to the output file (overwrite mode)
             FileWriter output = new FileWriter("Assignment4_Output.txt", false);
-            
-            for(int i = 0; i < arr.length; i+=2){
-                String temp = arr[i] + " + " + arr[i+1] + " = " + (arr[i] + arr[i+1]);
-                output.write(temp + "\n");
 
+            // Read pairs of integers from the file until no more numbers are available
+            while (exit != true) {
+                try {
+                    // Read two integers from the file
+                    int1 = fileScanner.nextInt();
+                    int2 = fileScanner.nextInt();
+                    
+                    // Format the sum as an equation and write it to the output file
+                    String temp = int1 + " + " + int2 + " = " + (int1 + int2);
+                    output.write(temp + "\n");
+
+                } catch (Exception e) {
+                    // If an exception occurs (e.g., no more numbers), exit the loop
+                    exit = true;
+                }
             }
 
+            // Close the file writer and scanner
             output.close();
             fileScanner.close();
-        } catch (IOException e) {
-            e.printStackTrace(); // Prints full exception details
-        }
 
+        } catch (IOException e) {
+            // Handle file-related errors (e.g., file not found, permission issues)
+            e.printStackTrace();
+        }
     }
 }
