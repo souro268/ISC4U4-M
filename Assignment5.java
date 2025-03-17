@@ -1,11 +1,10 @@
-import java.io.File; // Importing File class to handle file operations
-import java.io.FileWriter; // Importing FileWriter class to write output to files
-import java.io.IOException; // Importing IOException for handling file-related errors
-import java.util.Scanner; // Importing Scanner class to read from files
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
 
 /**
- * Processes student grades from a file, calculates statistics,
- * and writes the results to an output file.
+ * Processes student grades from a file and writes the results to an output file.
  */
 public class Assignment5 {
 
