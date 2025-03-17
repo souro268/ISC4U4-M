@@ -5,11 +5,17 @@ import java.util.Scanner;
 
 /**
  * Processes student grades from a file and writes the results to an output file.
+ * </p>
+ * This program reads student data from a file, extracts the names and grades,
+ * calculates the average grade, highest grade, and lowest grade, and writes
+ * this information to an output file. If an error is found in the input data,
+ * an error message is displayed.
  */
 public class Assignment5 {
 
     /**
      * Main method that controls file reading, processing, and writing output.
+     * 
      * @param args Command-line arguments (not used).
      * @throws {@link java.io.IOException} if the input or output file cannot be accessed.
      */
@@ -51,6 +57,11 @@ public class Assignment5 {
     /**
     * Processes student data to compute the average grade, highest grade, 
     * lowest grade, and outputs this information to a file.
+    *
+    * * <p>
+    * This method calculates the average grade, highest grade, and lowest grade,
+    * then outputs the results to a file. If an error is found in the input data,
+    * an error message is displayed.
     *
     * @param Name_Arr Array of student names.
     * @param Grade_Arr Array of student grades.
@@ -122,10 +133,15 @@ public class Assignment5 {
         }
     }
 
-        /**
+    /**
      * Bubble sort algorithm to sort grades and corresponding names in ascending order.
      * The algorithm repeatedly compares adjacent elements and swaps them if they are in the wrong order.
      * It continues this process until the array is sorted.
+     * 
+     * <p>
+     * This method arranges the grades in ascending order while keeping the corresponding
+     * student names aligned with their respective grades.
+     * 
      * 
      * @param grades Array of student grades to be sorted.
      * @param names Array of student names, where each name corresponds to a grade.
@@ -159,6 +175,11 @@ public class Assignment5 {
      * Extracts student names from an array of student data (Totalarr) that contains both names and grades.
      * This method assumes the name is the first part of the data, and the grade follows it.
      * 
+     * * <p>
+     * This method assumes that the name appears first in each student's data entry,
+     * and it separates and stores the names in a new array.
+     * 
+     * 
      * @param counter The number of students (the length of the Totalarr array).
      * @param Totalarr Array of strings representing student data, where each element contains a name and a grade.
      * @return An array of strings containing the names of the students.
@@ -180,6 +201,10 @@ public class Assignment5 {
     /**
     * Extracts grades from a given array of strings (representing student data) 
     * and converts them into an integer array.
+    *
+    * * <p>
+    * This method assumes that the grade appears after the student's name in each entry,
+    * converts the grades to integers, and stores them in an array.
     *
     * @param counter The number of students (length of Totalarr).
     * @param Totalarr Array of strings representing student names and grades.
@@ -210,6 +235,9 @@ public class Assignment5 {
 
     /**
     * Reads student data from a file and stores each line as a string in an array.
+    * <p>
+    * This method scans the file, reading each student's information and saving it
+    * into an array, where each element represents a student's name and grade.
     *
     * @param counter The number of students (used to define the array size).
     * @param textFile The file containing the student data.
@@ -241,7 +269,11 @@ public class Assignment5 {
     /**
     * Counts the number of lines in a given file to determine the number of students.
     *
-    * @param counter The initial count (typically 0).
+    * </p>
+    * This method reads through the file line by line and increments a counter
+    * for each line found, which represents a student entry.
+    *
+    * @param counter The initial count.
     * @param textFile The file to be read.
     * @return The total number of lines (students) in the file. 
     *         In case of an {@link java.io.IOException}, returns a negative 
