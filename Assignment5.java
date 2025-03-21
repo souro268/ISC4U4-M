@@ -1,3 +1,4 @@
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -19,7 +20,7 @@ public class Assignment5 {
      * @param args Command-line arguments (not used).
      * @throws {@link java.io.IOException} if the input or output file cannot be accessed.
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         try {
             // Creating a File object for reading the input file
             File textFile = new File("Assignment5_input.txt");
@@ -213,7 +214,7 @@ public class Assignment5 {
     * @throws {@link java.lang.ArrayIndexOutOfBoundsException} If there is a mismatch in the number of fields.
     * @return Grade_Arr An array of integers representing the grades of students.
     */
-    public static int[] grades(int counter, String[] Totalarr) {
+    public static int[] grades(int counter, String[] Totalarr)throws NumberFormatException, ArrayIndexOutOfBoundsException {
 
         int[] Grade_Arr = new int[counter]; // Creating an array to store grades
 
@@ -246,7 +247,7 @@ public class Assignment5 {
     * @throws {@link java.io.IOException} If there is an error reading from the file.
     * @return arr An array of strings, each representing a student's data (name and grade).
     */
-    public static String[] total_arr(int counter, File textFile) {
+    public static String[] total_arr(int counter, File textFile)throws IOException {
         String[] arr = new String[counter]; // Creating an array to store student data
         try {
             // Creating a scanner object to read the input file
@@ -281,7 +282,7 @@ public class Assignment5 {
     * @throws {@link java.io.IOException} If there is an error reading the file.
     * @return counter The total number of lines (students) in the file.
     */
-    public static int counters(int counter, File textFile) {
+    public static int counters(int counter, File textFile) throws IOException {
         try {
             // Creating a scanner object to read the file
             Scanner fileScanner = new Scanner(textFile);
