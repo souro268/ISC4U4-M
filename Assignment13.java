@@ -3,25 +3,7 @@ import java.util.Scanner;
 
 public class Assignment13 {
 
-    // Method to calculate the total of a specific row in the table
-    public static int rowTotal(int[][] array, int row) {
-        int total = 0;
-        // Loop through each column in the specified row and add the values
-        for (int col = 0; col < array[row].length; col++) {
-            total += array[row][col];
-        }
-        return total;
-    }
-
-    // Method to calculate the total of a specific column in the table
-    public static int columnTotal(int[][] array, int col) {
-        int total = 0;
-        // Loop through each row for the specified column and add the values
-        for (int row = 0; row < array.length; row++) {
-            total += array[row][col];
-        }
-        return total;
-    }
+    
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -80,5 +62,24 @@ public class Assignment13 {
         }
 
         input.close(); // Close the scanner
+    }
+    // Method to calculate the total of a specific row in the table
+    public static int rowTotal(int[][] array, int row) {
+        int total = 0;
+        // Loop through each column in the specified row and add the values
+        for (int col = 0; col < array[row].length; col++) {
+            total += array[row][col];
+        }
+        return total;
+    }
+
+    // Method to calculate the total of a specific column in the table
+    public static int columnTotal(int[][] array, int col) {
+        int total = 0;
+        // Loop through each row for the specified column and add the values
+        for (int row = 0; row < array.length; row++) {
+            total += array[row][col];
+        }
+        return total;
     }
 }
