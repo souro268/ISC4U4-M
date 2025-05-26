@@ -31,10 +31,9 @@ public class Main {
 	public static void display(Person[] people)
 	{
 		//COMPLETE THIS
+		// displays the name and their age
 		for(int i = 0; i < people.length; i++){
-			int int_temp = people[i].getAge();
-			String str_temp = people[i].getName();
-			System.out.println("Name: " + str_temp + " - Age: " + int_temp);
+			System.out.println("Name: " + people[i].getName() + " - Age: " + people[i].getAge());
 			
 		}
 
